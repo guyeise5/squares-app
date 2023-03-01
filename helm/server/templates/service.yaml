@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: square-app
+  name: square-app
+spec:
+  ports:
+  - port: 80
+    name: web
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: square-app
+  type: ClusterIP
